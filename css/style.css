@@ -1,0 +1,315 @@
+body
+{
+	background-color: #F7F7F7;
+	overflow-x:hidden; 
+}
+body {font-family: Sofia Pro, sans-serif; color: #444444; font-size: 16px}
+hr
+{
+	border-color: #eee;
+	width: 74%;
+}
+
+#hr-small
+{
+	width: 20%;
+}
+
+.margin-top-5{
+	margin-top: 5%;
+}
+
+.margin-top-150{
+	margin-top: 150px;
+}
+
+.margin-top-170{
+	margin-top:170px;
+}
+
+.maroon{
+	color: #800000;
+}
+.door
+{
+	
+	position: absolute;
+	background-color: #ddd;
+}
+
+
+#lefty
+{
+	background-image: url('../images/back5.jpg');
+	background-size: 200% 100%;
+	background-position: 0px 0px;
+	width: 50%;
+	height: 100vh;
+	z-index: 199;
+}
+
+
+#righty
+{
+	background-image: url('../images/back5.jpg');
+	background-size: 200% 100%;
+	background-position: -675px 0px;
+	width: 50%;
+	height: 100vh;
+	left:50%;
+	z-index: 199;
+}
+
+/*center rotation button starts*/
+
+.center-but
+{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	border-radius: 70px 0 0 70px;
+	border-left: solid 5px rgb(221, 221, 221);
+	top: 45%;
+	left: 47%;
+	z-index: 20000;
+	cursor: pointer;
+	-webkit-animation-name:             spin;
+	-webkit-animation-duration:         1s;
+	-webkit-animation-iteration-count:  infinite;
+	-webkit-animation-timing-function:  linear;
+}
+
+#inner-c-but
+{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 14px;
+	left: 14px;
+	border-radius: 40px 0 0 40px;
+	border-left: solid 5px #656363;
+	-webkit-animation-name:             spin;
+	-webkit-animation-duration:         8s;
+	-webkit-animation-iteration-count:  infinite;
+	-webkit-animation-timing-function:  linear;
+}
+
+
+
+@-webkit-keyframes spin {
+  from { -webkit-transform:rotate(0deg) } 
+  to { -webkit-transform:rotate(360deg) } 
+}
+@-moz-keyframes spin {
+  from { -webkit-transform:rotate(0deg) } 
+  to { -webkit-transform:rotate(360deg) }   
+}
+@-o-keyframes spin {
+  from { -webkit-transform:rotate(0deg) } 
+  to { -webkit-transform:rotate(360deg) }   
+}
+@keyframes spin {
+  from { -webkit-transform:rotate(0deg) } 
+to { -webkit-transform:rotate(360deg) }   
+}
+
+.navbar
+{
+	margin: 0;
+	border-radius: 0;
+	padding:5px;
+}
+
+.container-fluid
+{
+	width: 1170px;
+	margin: 0 auto;
+	
+}
+
+.container-full
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.landingPage
+{
+	background-image: url('../images/landing.jpg');
+	background-size: cover;
+	background-position: center center; 
+	color: white;
+	height: 100vh;
+	
+
+}
+
+.leader{
+	letter-spacing: 0.1em;
+	
+	margin-top: 20px;
+	font-size:26px;
+}
+
+.searchBox{
+	margin-top:140px;
+	padding: 5px;
+}
+
+.thumbnail img
+{
+	width: 200px;
+	border-radius: 0;
+	padding: 6px;
+}
+.glyphicon-user
+{
+	font-size: 4.3em;
+}
+
+.glyphicon-user:hover
+{
+ color: limegreen ;
+}
+
+#down-arrow
+{
+	margin-top: 260px;
+	-webkit-animation : toggle-opacity 3s infinite;
+}
+
+@-webkit-keyframes toggle-opacity {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+#result-row
+{
+	padding: 30px;
+	padding-left: 10px;
+}
+
+
+
+/*====================LOGIN=======================*/
+
+#login-form {
+	margin: 50px auto;
+	width: 300px;
+}
+
+#login-form h3 {
+	background-color: #282830;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 14px;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#login-form fieldset {
+	background: #fff;
+	border-radius: 0 0 5px 5px;
+	padding: 20px;
+	position: relative;
+}
+
+#login-form fieldset:before {
+	background-color: #fff;
+	content: "";
+	height: 8px;
+	left: 50%;
+	margin: -4px 0 0 -4px;
+	position: absolute;
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	width: 8px;
+}
+
+#login-form input {
+	font-size: 14px;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"] {
+	border: 1px solid #dcdcdc;
+	padding: 12px 10px;
+	width: 238px;
+}
+
+#login-form input[type="email"] {
+	border-radius: 3px 3px 0 0;
+}
+
+#login-form input[type="password"] {
+	border-top: none;
+	border-radius: 0px 0px 3px 3px;
+}
+
+#login-form input[type="submit"] {
+	background: #1dabb8;
+	border-radius: 3px;
+	color: #fff;
+	float: right;
+	font-weight: bold;
+	margin-top: 20px;
+	padding: 12px 20px;
+}
+
+#login-form input[type="submit"]:hover { background: #198d98; }
+
+#login-form footer {
+	font-size: 12px;
+	margin-top: 16px;
+}
+
+.info {
+	background: #e5e5e5;
+	border-radius: 50%;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 10px 0 0;
+	text-align: center;
+	width: 20px;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+}
+
+input {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+	-webkit-appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="submit"] { cursor: pointer; }
+
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;	
+}
+.clearfix:after { clear: both; }
+
+/*LOGIN FORM ENDS*/
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {   
+border-color: rgba(126, 239, 104, 0.8);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+outline: 0 none;}

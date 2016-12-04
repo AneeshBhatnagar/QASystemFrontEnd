@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	 <title>Q&A</title>
+
+  	  <meta name="viewport" content="width=device-width , initial scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+
+    <link rel="shortcut icon" href="images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="css/styleblocks.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   
+  	 
+  </head>
+
+    <body>
+     <div class="center-but"><div id="inner-c-but" class="center-but"></div></div>
+        <div id="lefty" class="door"></div>
+        <div id="righty" class="door"></div>
+
+    	<div class="container-full landingPage" >
+      
+
+         <!-- HEADER -->
+
+         <!-- <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ask n Get</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">SignUp</a></li>
+        
+      </ul>
+    </div>
+  </div>
+   -->
+  <!-- header endssss===== -->
+          <div class="row">
+            <div class="col-md-12 text-center v-center leader" >
+             <h1 style="text-transform: uppercase;">Question and answer portal</h1>
+             <p>ask &middot get results</p>
+                
+                   <!-- SEARCH FORM -->
+                  <form class="col-md-12 searchBox">
+                      <div class="input-group input-group-lg col-sm-offset-3 col-sm-6">
+                       <input type="text" class="center-block form-control input-lg" title="Enter you query" placeholder="Search">
+                        <span class="input-group-btn"><button class="btn btn-lg btn-success" type="button">Search<!-- <i class="glyphicon glyphicon-search" style="padding:5px;"></i> --></button></span>
+                      </div>
+                  </form>
+             <!-- <button class="btn btn-lg btn-primary" type="button"><i class="glyphicon glyphicon-user"></i></button></span>
+              <hr id="hr-small"> -->
+            </div> 
+
+          </div><!--row ends-->
+              
+              
+              <div class="row">
+                <div class="col-md-12 text-center">
+                <!-- <div class="down-arrow-line">____</div><br> -->
+                <div> <i class="glyphicon glyphicon-chevron-down" id="down-arrow" style="font-size:2.1em;"></i></div>  <!-- +++DOWN ICON+++ -->
+                </div>
+              </div> <!-- row ends -->
+              <br>
+            </div> <!-- container full ends -->
+          <br>
+          <!-- container FLUID BEGINS========== -->
+          <div class="container">
+            
+            <div class="row"> <!-- main row starts -->
+             <!-- results separate column starts / left side of the page-->
+                <div calss="col-md-6 col-xs-8"> 
+                    <!-- RESULTS ROW STARTS -->
+                    <div class="row results">
+                        <div class="row">
+                          <div class="col-md-8"> <!-- heading starts -->
+                            <h2>Showing results for <span class="maroon"> Dynamic field</span></h2>
+                          </div><!--Result heading ends -->
+                        </div> <!-- result heading row ends -->
+                        <br/>
+                    <div class="row"> <!-- result catagory row starts/ nested row -->
+                        <div class="col-md-2"><p>Show result catagory by </p></div> 
+                        <div class="btn-group col-md-1">
+                          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Date <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">Month 1</a></li>
+                              <li><a href="#">Month 2</a></li>
+                              <li><a href="#">Month 3</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Yearly</a></li>
+                          </ul>
+                          <br/>
+                        </div> <!-- button group ends -->
+                        <div class="btn-group col-md-1">
+                          <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Location <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">All</a></li>
+                          </ul>
+                          <br/>
+                        </div> <!-- button group ends -->
+                    </div><!-- result catagory ends -->
+                    <hr>
+                    <p><span class="maroon">#__</span> of resuts found</p>
+                    <!-- MAIN result card begins -->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">This is our main result</div>
+                          <div class="panel-body">
+                            Here is the answer <hr/><hr/><hr/><hr/><hr/>
+                          </div>
+                      </div>
+                    </div>
+                  </div> <!-- main result row ends -->
+
+            </div><!--results row ends-->
+              <div class="rows"> <!-- secondary results begins -->
+                <div class="col-md-12">
+                  <div class="media">
+                     <div class="media-left media-middle pull-left">
+                        <a href="#">
+                              <img class="media-object" src="images/thumbnail.jpg" alt="..." width="64px">
+                        </a>
+                      </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media heading</h4>
+                               this is another answer 
+                    </div>
+                  </div>
+                </div> <!-- col ends -->
+                <hr/>
+                <div class="col-md-12">
+                  <div class="media">
+                     <div class="media-left media-middle pull-left">
+                        <a href="#">
+                              <img class="media-object" src="images/thumbnail.jpg" alt="..." width="64px">
+                        </a>
+                      </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media heading</h4>
+                               this is another answer
+                    </div>
+                  </div>
+                </div> <!-- col ends -->
+                <hr/>
+                <div class="col-md-12">
+                  <div class="media">
+                     <div class="media-left media-middle pull-left">
+                        <a href="#">
+                              <img class="media-object" src="images/thumbnail.jpg" alt="..." width="64px">
+                        </a>
+                      </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media heading</h4>
+                               this is another answer
+                    </div>
+                  </div>
+                </div> <!-- col ends -->
+                <hr/>
+              </div> <!-- secondary results ends -->
+          <!-- Page navigation begins -->
+          <div class="row centered">
+            <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div> <!-- page navigation ends -->
+          <!-- results separate column ends / left side of the page-->
+          <div class="col-md-6 col-xs-6" >
+            This is tha analytics col
+          </div>
+       </div> <!-- main row ends -->
+    	</div><!--main container fluid ends-->
+       <script type="text/javascript">
+               $(document).ready(function () {
+            $(".center-but").click(function () {
+                var lefty = $("#lefty");
+                lefty.animate
+                     ({ left: '-51%' }, "slow").hide(250);
+            });
+            $(".center-but").click(function () {
+                var righty = $("#righty");
+                righty.animate
+                 ({ left: '101%' }, "slow").hide(250);
+                $(".center-but").animate({ top: '-10px' }, "slow").hide(250);
+            });
+        });
+
+        </script>
+    </body>
+</html>
