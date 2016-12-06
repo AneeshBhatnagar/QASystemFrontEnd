@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <title>Search Results</title>
+
+			<meta name="viewport" content="width=device-width , initial-scale=1">
+			<meta name="description" content="">
+			<meta name="author" content="">
+
+
+		<link rel="shortcut icon" href="images/logo.png"/>
+		<link rel="stylesheet" type="text/css" href="css/styleblocks.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/include/jqcloud.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<!-- <script type="text/javascript" src="js/jquery-1.11.0.js"></script> -->
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/include/Chart.min.js"></script>
+		<script src="js/include/jqcloud.min.js"></script>
+	</head>
+
+	<body>
+		<!-- container FLUID BEGINS========== -->
+		<div class="container">
+			<div class="row"> <!-- main row starts -->
+				<div class="col-md-12" style="margin-bottom: 20px;">
+					<h2>Showing results for <span class="maroon" id="search-term">Who is the Prime Minister of India?</span></h2>
+					<hr>
+				</div>
+			 <!-- results separate column starts / left side of the page-->
+				<div class="col-md-6 col-xs-12"> 
+						<!-- RESULTS ROW STARTS -->
+						<div class="row results">
+							<!-- MAIN result card begins -->
+							<div class="row">
+								<div class="col-md-10">
+									<div class="panel panel-default">
+										<div class="panel-heading" id="search-question">Who is the Prime Minister of India?</div>
+										<div class="panel-body">
+											Answer: <span id="search-answer" class="maroon">Narendra Modi</span><hr/>
+										</div>
+									</div>
+								</div>
+							</div> <!-- main result row ends -->
+						</div><!--results row ends-->
+						<div class="rows"> <!-- secondary results begins -->
+							<div class="col-md-12">
+								<p>Displaying the Top <span class="maroon" id="result-count">10</span> Tweets matching your Query</p>
+							</div>
+							<div class="col-md-12">
+								<div class="media">
+									<div class="media-left media-middle pull-left">
+										<a href="#"><img class="media-object" src="images/thumbnail.jpg" alt="..." width="64px"></a>
+									</div>
+									<div class="media-body">
+										<h4 class="media-heading">Aneesh Bhatnagar</h4>
+										<h5 class="media-heading">@SlashAneesh</h5>
+										<p>this is another answer</p>
+									</div>
+								</div>
+							</div> <!-- col ends -->
+							<hr/>
+						</div> <!-- secondary results ends -->
+					<!-- results separate column ends / left side of the page-->
+			 		</div> <!-- main row ends -->
+			 		<div class="col-md-6 col-xs-12">
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<h4>Analysis on Various Hashtags in Displayed Tweets</h4>
+								<canvas id="hashtags-chart"></canvas>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<h4>Word Cloud</h4>
+							</div>
+							<div class="col-md-12 col-xs-12" id="word-cloud-area" style="height:250px;"></div>
+						</div>
+			 		</div>
+				</div><!--main container fluid ends-->
+		<script src="js/search-script.js"></script>
+		</body>
+</html>
