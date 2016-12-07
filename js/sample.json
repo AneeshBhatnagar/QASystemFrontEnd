@@ -1,0 +1,34 @@
+{
+  "answer": "Narendra Modi",
+  "hashtag_counts": "[10,20,15,35]",
+  "hashtag_labels": "[Aneesh,Testing,Blah,Blah]",
+  "tweet_count": 2,
+  "tweets": [
+    {
+      "profile_pic_url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "screen_name": "Aneesh Bhatnagar",
+      "tweet_text": "Hello there!",
+      "user_name": "SlashAneesh"
+    },
+    {
+      "profile_pic_url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "screen_name": "Aneesh Testing",
+      "tweet_text": "Hello therew2!",
+      "user_name": "SlashAnTs"
+    }
+  ],
+  "wordcloud":[
+  		{
+  			"text":"Aneesh",
+  			"weight":10
+  		},
+  		{
+  			"text":"Bhatnagar",
+  			"weight":10
+  		},
+  		{
+  			"text":"Test",
+  			"weight":10
+  		}
+  ]
+}

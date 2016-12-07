@@ -116,8 +116,10 @@ to { -webkit-transform:rotate(360deg) }
 .navbar
 {
 	margin: 0;
-	border-radius: 0;
-	padding:5px;
+	border-radius: 1px;
+	padding:2px;
+	background-color: #800;
+	color: white;
 }
 
 .container-fluid
@@ -154,7 +156,7 @@ to { -webkit-transform:rotate(360deg) }
 
 .searchBox{
 	margin-top:140px;
-	padding: 5px;
+	padding: 3px;
 }
 
 .thumbnail img

@@ -24,9 +24,32 @@
 
 	<body>
 		<!-- container FLUID BEGINS========== -->
+
 		<div class="container">
+		<!-- HEADER -->
+
+         <div class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="navbar-header">
+      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> -->
+      <a class="navbar-brand" href="#" style="color:white;">Question &amp; Answer</a>
+
+      <form class="searchBox" style="margin-top:0; max-width:800px;">
+                      <div class="input-group input-group-lg">
+                       <input type="text" class="center-block form-control input-lg" title="Enter you query" placeholder="Who is the Prime Minister of India?" id="searchbar">
+                        <span class="input-group-btn"><button class="btn btn-lg btn-success" type="button"><i class="glyphicon glyphicon-search" style="padding:5px;"></i></button></span>
+                      </div>
+                  </form>
+              
+    </div>
+  </div>
+  
+  <!-- header endssss===== -->
 			<div class="row"> <!-- main row starts -->
-				<div class="col-md-12" style="margin-bottom: 20px;">
+				<div class="col-md-12" style="margin-bottom: 20px; margin-top:60px;">
 					<h2>Showing results for <span class="maroon" id="search-term">Who is the Prime Minister of India?</span></h2>
 					<hr>
 				</div>
@@ -40,7 +63,7 @@
 									<div class="panel panel-default">
 										<div class="panel-heading" id="search-question">Who is the Prime Minister of India?</div>
 										<div class="panel-body">
-											Answer: <span id="search-answer" class="maroon">Narendra Modi</span><hr/>
+											Answer: <span id="search-answer" class="maroon">as Modi</span><hr/>
 										</div>
 									</div>
 								</div>
@@ -50,7 +73,7 @@
 							<div class="col-md-12">
 								<p>Displaying the Top <span class="maroon" id="result-count">10</span> Tweets matching your Query</p>
 							</div>
-							<div class="col-md-12">
+							<!-- <div class="col-md-12">
 								<div class="media">
 									<div class="media-left media-middle pull-left">
 										<a href="#"><img class="media-object" src="images/thumbnail.jpg" alt="..." width="64px"></a>
@@ -61,8 +84,8 @@
 										<p>this is another answer</p>
 									</div>
 								</div>
-							</div> <!-- col ends -->
-							<hr/>
+							</div>
+							<hr/> -->
 						</div> <!-- secondary results ends -->
 					<!-- results separate column ends / left side of the page-->
 			 		</div> <!-- main row ends -->
