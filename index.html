@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	 <title>Q&amp;A</title>
+  	 <title>N-Quire | A Twitter Data based QA system</title>
 
   	  <meta name="viewport" content="width=device-width , initial scale=1">
       <meta name="description" content="">
@@ -53,11 +53,11 @@
   <!-- header endssss===== -->
           <div class="row">
             <div class="col-md-12 text-center v-center leader" >
-             <h1 style="text-transform: uppercase;">Question and answer portal</h1>
+             <h1 style="text-transform: uppercase;">N-Quire</h1>
              <p>ask &middot get results</p>
                 
                    <!-- SEARCH FORM -->
-                  <form class="col-md-12 searchBox" action="search.html" method="get">
+                  <form class="col-md-12 searchBox" action="search.html" method="get" onsubmit= "return validateForm()" id="question-form">
                       <div class="input-group input-group-lg col-sm-offset-3 col-sm-6">
                        <input type="text" class="center-block form-control input-lg" title="Enter you query" placeholder="Search" id="searchbar" name="query">
                         <span class="input-group-btn"><button class="btn btn-lg btn-success" type="submit">Search<!-- <i class="glyphicon glyphicon-search" style="padding:5px;"></i> --></button></span>

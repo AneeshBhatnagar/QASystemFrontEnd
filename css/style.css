@@ -325,3 +325,25 @@ outline: 0 none;}
 .ui-autocomplete{
 	width:525px !important;
 }
+
+/* Spinner/ Loader CSS */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 9999;
+}
+
+#spinner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    margin: -40px 0 0 -40px;
+    background: url(../images/spinner.GIF) no-repeat;
+}

@@ -1,18 +1,28 @@
 $(document).ready(function(){
-	var availableTags = [
-      "Who is the Prime Minister of India?",
-      "Who is behind the Demonetization?",
-      "When was Demonetization announced? ",
-      "Who announced the Demonetization?",
-      "Where was Demonetization announced?"
-    ];
 
-	$("#searchbar").autocomplete({
-      source: availableTags,
-      minLength: 2,
-      select: function(event,ui){
-      	console.log(ui.item.label);
-      }
-    });
+  $.ajax({
+    'url': "http://35.162.43.82:8888/getAutoComplete",
+    'success': function(data){
+      $("#searchbar").autocomplete({
+        source: data.matches,
+        minLength: 2,
+        select: function(event,ui){
+          $("#searchbar").val(ui.item.label);
+          $("#question-form").submit();
+        }
+      });
+    },
+    'dataType': 'jsonp',
+    'jsonp': 'callback'
+  });
 });
 
+
+function validateForm(){
+  var val = $("#searchbar").val();
+  if( val == '' || val == ' ' || val == null){
+    alert("Please enter a question.")
+    return false;
+  }
+  return true;
+}

@@ -13,20 +13,38 @@ var words = [
 		];
 */
 
-/*Read JSON File*/
+//Replace +, ? etc
+var queryTerm = getURLParameter();
+
+for(var i = 0; i<queryTerm.length; i++){
+	queryTerm = queryTerm.replace("+", " ");	
+	queryTerm = queryTerm.replace("%3F", "?");
+	queryTerm = queryTerm.replace("%20", " ");
+}
+
+$("#search-term").html(queryTerm);
+$("#searchbar").val(queryTerm);
+$("#search-question").html(queryTerm);
+
+var queryUrl = "http://35.162.43.82:8888/getResults?query=%22" + queryTerm + "%22";
+
+/*Query Backend server for results*/
 $.ajax({
-		  'url': 'http://192.168.1.233:8888/getResults?query=%22who%20is%20the%20PM?%22',
-		  'data': {},
-		  'success': callOnSuccess,
+		  'url': queryUrl,
+		  'success': parseData,
 		  'dataType': 'jsonp',
 		  'jsonp': 'callback'
 		});
 
-function callOnSuccess(data){
+function parseData(data){
+	if(data.answer == '' || data.answer == ' '){
+		$("#result-box").css('display','none');
+	}
 	$("#search-answer").html(data.answer);
 	$("#result-count").html(data.tweet_count);
 	createWordCloud(data.wordcloud);
 	createChartForHashtags(data.hashtags.labels, data.hashtags.count);
+	createSentimentChart(data.sentiment.labels,data.sentiment.count);
 	var tweets = data.tweets;
 	var profilePic, name, username, tweet, appendData;
 	for(var i=0; i<tweets.length;i++){
@@ -36,6 +54,23 @@ function callOnSuccess(data){
 		tweet = tweets[i].text;
 		$("#tweets-row").append(returnAppendData(profilePic, name, username, tweet));
 	}
+
+	$("#preloader").fadeOut();
+	$.ajax({
+	    'url': "http://35.162.43.82:8888/getAutoComplete",
+	    'success': function(data){
+	      $("#searchbar").autocomplete({
+	        source: data.matches,
+	        minLength: 2,
+	        select: function(event,ui){
+	          $("#searchbar").val(ui.item.label);
+	          $("#question-form").submit();
+	        }
+	      });
+	    },
+	    'dataType': 'jsonp',
+	    'jsonp': 'callback'
+	});
 }
 
 function returnAppendData(pic, name, username, text){
@@ -91,16 +126,58 @@ function createChartForHashtags(labelNames, labelCount){
 	});
 }
 
+/* Displaying sentiment analysis chart */
+function createSentimentChart(sentimentLabels, sentimentData){
+
+	var colors = new Array();
+
+	for(var i=0; i<sentimentLabels.length; i++){
+		if(sentimentLabels[i] == 'Verypositive'){
+			colors.push("#24730E");
+		}
+		else if(sentimentLabels[i] == 'Positive'){
+			colors.push("#3DC418");
+		}
+		else if(sentimentLabels[i] == 'Neutral'){
+			colors.push("#FFDD00");
+		}
+		else if(sentimentLabels[i] == 'Negative'){
+			colors.push("#ff0000");
+		}
+		else if(sentimentLabels[i] == 'Verynegative'){
+			colors.push("#B22222");
+		}
+	}
+
+	var data = {
+		labels: sentimentLabels,
+		datasets: [
+        {
+            data: sentimentData,
+            backgroundColor: colors,
+            hoverBackgroundColor: colors
+        }]
+	};
+
+	var canvas = document.getElementById('sentiment-chart').getContext('2d');
+	new Chart(canvas,{
+	    type: 'pie',
+	    data: data
+	});
+
+}
+
+function getURLParameter(){
+	var urlVars = window.location.search.substring(1).split('&');
+	for(var i = 0; i<urlVars.length; i++){
+		var splitParams = urlVars[i].split("=");
+		if (splitParams[0] == 'query'){
+			return splitParams[1];
+		}
+	}
+}
+
 /* Displaying WordCloud */
 function createWordCloud(words){
 	$('#word-cloud-area').jQCloud(words);
-}
-
-function parseJsonData(data){
-	$("#search-answer").html(data.answer);
-	$("#result-count").html(data.tweet_count);
-	var hashtag_count = data.hashtag_counts.split(",");
-	for(var i=0; i<hashtag_count.length; i++) { hashtag_count[i] = parseInt(hashtag_count[i], 10); } 
-	createChartForHashtags(data.hashtag_labels.split(","), hashtag_count);
-		
 }
