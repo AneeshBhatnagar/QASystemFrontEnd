@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $.ajax({
-    'url': "http://35.162.43.82:8888/getAutoComplete",
+    'url': "http://35.166.31.35:8888/getAutoComplete",
     'success': function(data){
       $("#searchbar").autocomplete({
         source: data.matches,

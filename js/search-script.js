@@ -11,7 +11,7 @@ $("#search-term").html(queryTerm);
 $("#searchbar").val(queryTerm);
 $("#search-question").html(queryTerm);
 
-var queryUrl = "http://35.162.43.82:8888/getResults?query=%22" + queryTerm + "%22";
+var queryUrl = "http://35.166.31.35:8888/getResults?query=%22" + queryTerm.toLowerCase() + "%22";
 
 /*Query Backend server for results*/
 $.ajax({
@@ -48,7 +48,7 @@ function parseData(data){
 	}
 	$("#preloader").fadeOut();
 	$.ajax({
-	    'url': "http://35.162.43.82:8888/getAutoComplete",
+	    'url': "http://35.166.31.35:8888/getAutoComplete",
 	    'success': function(data){
 	      $("#searchbar").autocomplete({
 	        source: data.matches,
